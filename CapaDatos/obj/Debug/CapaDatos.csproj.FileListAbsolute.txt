@@ -1,0 +1,6 @@
+C:\Users\PC\source\repos\Arimlaph\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\PC\source\repos\Arimlaph\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\PC\source\repos\Arimlaph\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+C:\Users\PC\source\repos\Arimlaph\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\Arimlaph\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\PC\source\repos\Arimlaph\CapaDatos\obj\Debug\CapaDatos.pdb
