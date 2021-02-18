@@ -101,6 +101,7 @@
             this.txtVuelto.Size = new System.Drawing.Size(191, 29);
             this.txtVuelto.TabIndex = 15;
             this.txtVuelto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtVuelto.TextChanged += new System.EventHandler(this.txtVuelto_TextChanged);
             this.txtVuelto.Leave += new System.EventHandler(this.txtTransferencia_Leave);
             // 
             // label10
@@ -122,6 +123,7 @@
             this.txtEfectivo.Size = new System.Drawing.Size(191, 29);
             this.txtEfectivo.TabIndex = 13;
             this.txtEfectivo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtEfectivo.TextChanged += new System.EventHandler(this.txtEfectivo_TextChanged);
             this.txtEfectivo.Leave += new System.EventHandler(this.txtTransferencia_Leave);
             // 
             // label7
@@ -143,6 +145,7 @@
             this.txtMaster.Size = new System.Drawing.Size(191, 29);
             this.txtMaster.TabIndex = 11;
             this.txtMaster.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMaster.TextChanged += new System.EventHandler(this.txtMaster_TextChanged);
             this.txtMaster.Leave += new System.EventHandler(this.txtTransferencia_Leave);
             // 
             // label6
@@ -164,6 +167,7 @@
             this.txtVisa.Size = new System.Drawing.Size(191, 29);
             this.txtVisa.TabIndex = 9;
             this.txtVisa.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtVisa.TextChanged += new System.EventHandler(this.txtVisa_TextChanged);
             this.txtVisa.Leave += new System.EventHandler(this.txtTransferencia_Leave);
             // 
             // label5
@@ -185,6 +189,7 @@
             this.txtTransferencia.Size = new System.Drawing.Size(191, 29);
             this.txtTransferencia.TabIndex = 7;
             this.txtTransferencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTransferencia.TextChanged += new System.EventHandler(this.txtTransferencia_TextChanged);
             this.txtTransferencia.Leave += new System.EventHandler(this.txtTransferencia_Leave);
             // 
             // label4
@@ -206,6 +211,7 @@
             this.txtPagoMovil.Size = new System.Drawing.Size(191, 29);
             this.txtPagoMovil.TabIndex = 5;
             this.txtPagoMovil.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPagoMovil.TextChanged += new System.EventHandler(this.txtPagoMovil_TextChanged);
             this.txtPagoMovil.Leave += new System.EventHandler(this.txtPagoMovil_Leave);
             // 
             // label3
@@ -227,6 +233,7 @@
             this.txtDebito.Size = new System.Drawing.Size(191, 29);
             this.txtDebito.TabIndex = 3;
             this.txtDebito.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDebito.TextChanged += new System.EventHandler(this.txtDebito_TextChanged);
             this.txtDebito.Leave += new System.EventHandler(this.txtDebito_Leave);
             // 
             // label2
@@ -248,6 +255,7 @@
             this.txtDolar.Size = new System.Drawing.Size(191, 29);
             this.txtDolar.TabIndex = 1;
             this.txtDolar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDolar.TextChanged += new System.EventHandler(this.txtDolar_TextChanged);
             this.txtDolar.Leave += new System.EventHandler(this.txtDolar_Leave);
             // 
             // label1

@@ -41,7 +41,6 @@ namespace CapaDatos
         {
 
         }
-
         public DArticulo(int idarticulo, string codigo, string nombre, string descripcion, byte[] imagen,
             int idcategoria, int idpresentacion, string textobuscar, int inventario, double pcompra, 
             double pventa, double pvpbs)
@@ -157,7 +156,6 @@ namespace CapaDatos
             }
             return rpta;
         }
-
         public string Editar(DArticulo Articulo)
         {
             string rpta = "";
@@ -255,7 +253,6 @@ namespace CapaDatos
             }
             return rpta;
         }
-
         public string Eliminar(DArticulo Articulo)
         {
             string rpta = "";
@@ -290,7 +287,6 @@ namespace CapaDatos
             }
             return rpta;
         }
-
         public DataTable Mostrar()
         {
             DataTable DtResultado = new DataTable("articulo");
@@ -313,7 +309,6 @@ namespace CapaDatos
             }
             return DtResultado;
         }
-
         public DataTable BuscarNombre(DArticulo Articulo)
         {
             DataTable DtResultado = new DataTable("articulo");

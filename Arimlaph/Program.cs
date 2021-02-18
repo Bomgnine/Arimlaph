@@ -18,7 +18,7 @@ namespace Arimlaph
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmFacturas());
+            Application.Run(new FrmVentas());
         }
     }
 }

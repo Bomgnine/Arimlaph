@@ -8,7 +8,6 @@ C:\Users\PC\source\repos\Arimlaph\Arimlaph\bin\Debug\CapaPresentacion.pdb
 C:\Users\PC\source\repos\Arimlaph\Arimlaph\bin\Debug\CapaNegocios.pdb
 C:\Users\PC\source\repos\Arimlaph\Arimlaph\bin\Debug\CapaDatos.pdb
 C:\Users\PC\source\repos\Arimlaph\Arimlaph\obj\Debug\Arimlaph.csprojAssemblyReference.cache
-C:\Users\PC\source\repos\Arimlaph\Arimlaph\obj\Debug\Arimlaph.Form1.resources
 C:\Users\PC\source\repos\Arimlaph\Arimlaph\obj\Debug\Arimlaph.Properties.Resources.resources
 C:\Users\PC\source\repos\Arimlaph\Arimlaph\obj\Debug\Arimlaph.csproj.GenerateResource.cache
 C:\Users\PC\source\repos\Arimlaph\Arimlaph\obj\Debug\Arimlaph.csproj.CoreCompileInputs.cache

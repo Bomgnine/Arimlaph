@@ -26,19 +26,16 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
-
         private void FrmActualizarPrecios_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
             this.txtPrecioD.Focus();
         }
-
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             try
             {
                 string rpta = "";
-
                 if (this.txtPrecioD.Text == string.Empty)
                 {
                     MensajeError("Debe Ingesar el Precio");
@@ -46,15 +43,9 @@ namespace CapaPresentacion
                 else
                 {
                     rpta = NActualizarPrecios.ActualizarPrecios(Convert.ToDouble(this.txtPrecioD.Text.Trim()));
-
-
                     if (rpta.Equals("OK"))
                     {
                         this.MensajeOk("Se han actualizado los Precios en Bolívares");
-
-
-
-
                         FrmActualizarPrecios.ActiveForm.Close();
                     }
                     else

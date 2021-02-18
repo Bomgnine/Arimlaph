@@ -16,13 +16,10 @@ namespace CapaPresentacion
     {
         private bool IsNuevo = false;
         private bool IsEditar = false;
-
-
         public FrmCategoria()
         {
             InitializeComponent();
         }
-
         private void MensajeOk (string mensaje)
         {
             MessageBox.Show(mensaje, "Categoría", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -31,7 +28,6 @@ namespace CapaPresentacion
         {
             MessageBox.Show(mensaje, "Categoría", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
         private void Limpiar()  
         {
             this.txtNombre.Text = string.Empty;
@@ -44,7 +40,6 @@ namespace CapaPresentacion
             this.txtNombre.ReadOnly = !valor;
             this.txtDescripcion.ReadOnly = !valor;
         }
-
         private void Botones()
         {
             if (this.IsNuevo || this.IsEditar)
@@ -64,13 +59,11 @@ namespace CapaPresentacion
                 this.btnCancelar.Enabled = false;
             }
         }
-
         private void OcultarColumnas()
         {
             this.dataListado.Columns[0].Visible = false;
             this.dataListado.Columns[1].Visible = false;
         }
-
         private void Mostrar()
         {
             this.dataListado.DataSource = NCategoria.Mostrar();
@@ -79,31 +72,23 @@ namespace CapaPresentacion
             this.dataListado.Columns[3].Width = 400;
             this.lblTotal.Text = "Categorías: " + Convert.ToString(dataListado.Rows.Count);
         }
-
         private void BuscarNombre()
         {
             this.dataListado.DataSource = NCategoria.BuscarNombre(this.txtBuscar.Text);
             this.OcultarColumnas();
             this.lblTotal.Text = "Categorías: " + Convert.ToString(dataListado.Rows.Count);
         }
-
-
         private void FrmCategoria_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
-
             this.Mostrar();
             this.Habilitar(false);
             this.Botones();
-
-
         }
-
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             this.BuscarNombre();
         }
-
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             this.IsNuevo = true;
@@ -113,13 +98,11 @@ namespace CapaPresentacion
             this.Habilitar(true);
             this.txtNombre.Focus();
         }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
                 string rpta = "";
-
                 if(this.txtNombre.Text == string.Empty)
                 {
                     MensajeError("Debe Ingesar el Nombre");
@@ -144,7 +127,6 @@ namespace CapaPresentacion
                         {
                             this.MensajeOk("Se ha editado la categoría");
                         }
-
                     }
                     else
                     {
@@ -162,14 +144,12 @@ namespace CapaPresentacion
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-
         private void dataListado_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             this.txtCodigo.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["idcategoria"].Value);
             this.txtNombre.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["nombre"].Value);
             this.txtDescripcion.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["descripcion"].Value);
         }
-
         private void btnEditar_Click(object sender, EventArgs e)
         {
             if (!this.txtCodigo.Text.Equals(""))
@@ -183,7 +163,6 @@ namespace CapaPresentacion
                 this.MensajeError("Debe seleccionar primero la categoría a editar");
             }
         }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.IsEditar = false;
@@ -192,7 +171,6 @@ namespace CapaPresentacion
             this.Limpiar();
             this.Habilitar(false);
         }
-
         private void chkEliminar_CheckedChanged(object sender, EventArgs e)
         {
             if (chkEliminar.Checked)
@@ -204,7 +182,6 @@ namespace CapaPresentacion
                 this.dataListado.Columns[0].Visible = false;
             }
         }
-
         private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dataListado.Columns["Seleccionar"].Index)
@@ -213,7 +190,6 @@ namespace CapaPresentacion
                 ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
             }
         }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             try

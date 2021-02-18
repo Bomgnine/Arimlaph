@@ -18,7 +18,6 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
-
         private void mostrar()
         {
             this.dataListado.DataSource = NInventario.MostrarInventario();
@@ -26,21 +25,15 @@ namespace CapaPresentacion
             this.dataListado.Columns[2].Visible = false;
             this.txtCodigo.Focus();
         }
-
         private void BuscarInventario()
-        {
-            
+        {            
             this.dataListado.DataSource = NInventario.BuscarInventario(this.txtCodigo.Text);
         }
-
         private void FrmInventario_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
-            this.txtCodigo.Focus();
-            
-            
+            this.txtCodigo.Focus();                      
         }
-
         private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(e.KeyChar == (char)Keys.Enter)
@@ -49,14 +42,11 @@ namespace CapaPresentacion
                 this.txtInventario.Focus();
             }
         }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             try
             {
-                string rpta = "";
-               
-
+                string rpta = "";               
                 int suma, Iactual, Iagregar;
 
                 if (this.txtInventarioActual.Text == "")
@@ -90,18 +80,13 @@ namespace CapaPresentacion
                 {
                     MessageBox.Show("No se actualizó el Inventario", "Inventario", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
                 this.BuscarInventario();
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
-
-
         }
-
         private void dataListado_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             this.txtNombre.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["nombre"].Value);
@@ -111,7 +96,6 @@ namespace CapaPresentacion
             this.txtPventa.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["Pventa$"].Value);
             this.txtInventario.Focus();
         }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.txtCodigo.Text = string.Empty;
@@ -122,10 +106,7 @@ namespace CapaPresentacion
             this.txtPcompra.Text = string.Empty;
             this.txtPventa.Text = string.Empty;
             this.txtCodigo.Focus();
-            this.BuscarInventario();
-           
-        }
-
-       
+            this.BuscarInventario();           
+        }       
     }
 }

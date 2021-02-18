@@ -37,7 +37,6 @@ namespace CapaDatos
         {
 
         }
-
         public DPagos(int idv, string fecha, double divisas, double debito, double pagomovil, double transferencia, double visa,
             double master, double efectivo, double vuelto)
         {
@@ -52,7 +51,6 @@ namespace CapaDatos
             this.Efectivo = efectivo;
             this.Vuelto = vuelto;
         }
-
         public string Insertar(DPagos Pagos)
         {
             string rpta = "";
@@ -141,7 +139,6 @@ namespace CapaDatos
             }
             return rpta;
         }
-
         public string InsertarVenta(DPagos Ventas)
         {
             string rpta = "";

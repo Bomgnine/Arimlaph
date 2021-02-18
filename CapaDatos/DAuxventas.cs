@@ -189,7 +189,6 @@ namespace CapaDatos
             }
             return DtResultado;
         }
-
         public string IdV()
         {
             string rpta;

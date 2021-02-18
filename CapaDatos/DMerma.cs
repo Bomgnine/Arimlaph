@@ -26,7 +26,6 @@ namespace CapaDatos
             this.Fecha = fecha;
             this.TipoMerma = tipomerma;
         }
-
         public string Isertar(DMerma Merma)
         {
             string rpta = "";

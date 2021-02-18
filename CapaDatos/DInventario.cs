@@ -42,7 +42,6 @@ namespace CapaDatos
             this.Pcompra = pcompra;
             this.Pventa = pventa;
         }
-
         public DataTable MostrarInventario()
         {
             DataTable DtResultado = new DataTable("articulo");

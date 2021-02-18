@@ -356,7 +356,6 @@
             this.txtInventario.Size = new System.Drawing.Size(104, 26);
             this.txtInventario.TabIndex = 68;
             this.txtInventario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtInventario.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label9
             // 

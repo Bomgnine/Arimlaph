@@ -43,7 +43,6 @@ namespace CapaDatos
         {
 
         }
-
         public DFacturas(int idv, int nfactura, int ncontrol, string fecha, string nombre, string cedula, string telefono, 
             string direccion, double subtotal, double iva, double exento, double total, double totaldolares)
         {
@@ -172,7 +171,6 @@ namespace CapaDatos
                     SqlCon.Close();
             }
             return rpta;
-
         }
         public string Eliminar (DFacturas Factura)
         {
@@ -196,7 +194,6 @@ namespace CapaDatos
                 SqlCmd.Parameters.Add(ParIdv);
 
                 rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se eliminó el registro";
-
             }
             catch (Exception ex)
             {
@@ -208,7 +205,6 @@ namespace CapaDatos
                     SqlCon.Close();
             }
             return rpta;
-
         }
         public DataTable Buscar (DFacturas Factura)
         {
@@ -229,17 +225,14 @@ namespace CapaDatos
                 ParIdv.Value = Factura.Idv;
                 SqlCmd.Parameters.Add(ParIdv);
 
-
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);
-
             }
             catch (Exception ex)
             {
                 DtResultado = null;
             }
             return DtResultado;
-
         }
         public DataTable Mostrar()
         {
@@ -256,14 +249,12 @@ namespace CapaDatos
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);
-
             }
             catch (Exception ex)
             {
                 DtResultado = null;
             }
             return DtResultado;
-
         }
     }
 }

@@ -10,14 +10,10 @@ using System.Windows.Forms;
 
 using CapaNegocio;
 
-
-
 namespace CapaPresentacion
 {
     public partial class FrmVentas : Form
-
     {
-
         public FrmVentas()
         {
             InitializeComponent();
@@ -30,7 +26,6 @@ namespace CapaPresentacion
         {
             MessageBox.Show(mensaje, "Facturación", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
         private void OcultarColumnas()
         {
             this.dataListado.Columns[0].Visible = false;
@@ -61,7 +56,6 @@ namespace CapaPresentacion
             this.lblSubTotalDolar.Text = string.Empty;
             this.lblIvaDolar.Text = string.Empty;
         }
-
         public void Mostrar()
         {
             this.dataListado.DataSource = NAuxventas.Mostrar();
@@ -70,18 +64,12 @@ namespace CapaPresentacion
             this.dataListado.Columns[4].Width = 300;
             this.dataListado.Columns[5].Width = 75;
             this.dataListado.Columns[7].Width = 150;
-            this.dataListado.Columns[9].Width = 150;
-
-            
+            this.dataListado.Columns[9].Width = 150;            
             this.Calculos();
-        }
-
-     
+        }     
         private void Calculos()
         {
             double IVA = 1.16;
-
-
 
             var totalproductos = NAuxventas.Mostrar().Compute("SUM(cantidad)", "");
             this.lblTotalproductos.Text = "Total Productos: " + Convert.ToString(totalproductos);
@@ -106,8 +94,6 @@ namespace CapaPresentacion
                 var exentobs = NAuxventas.Mostrar().Compute("SUM(ImporteBs)", "nombre like '*(E)'");    // exento en bolivares
                 var subtotalBolivares = NAuxventas.Mostrar().Compute("SUM(ImporteBs)", "not nombre like '*(E)'"); // sub total en bolivares
 
-
-
                 var exentodolar = NAuxventas.Mostrar().Compute("SUM(Importe$)", "nombre like '*(E)'");  // exento en dólares
                 var subtotaldolar = NAuxventas.Mostrar().Compute("SUM(Importe$)", "not nombre like '*(E)'"); // sub total en dólares
 
@@ -118,22 +104,15 @@ namespace CapaPresentacion
 
                     this.lblIvaBolivares.Text = string.Format("{0:0,0.00}", Convert.ToDouble(subtotalBolivares)-(Convert.ToDouble(subtotalBolivares) / IVA));
                     this.lblIvaDolar.Text = string.Format("{0:0.00}", Convert.ToDouble(subtotaldolar) - (Convert.ToDouble(subtotaldolar) / IVA));
-
                 }
 
                 if (!((Convert.ToString(exentobs)) == ""))
                 {
                     this.lblExentoBolivares.Text = string.Format("{0:0,0.00}", exentobs);
                     this.lblExentoDolares.Text = string.Format("{0:0.00}", exentodolar);
-
-                }
-            
+                }            
             }
         }
-
-        
-
-
         private void FrmVentas_Load(object sender, EventArgs e)
         {
             string rpta = "";
@@ -151,8 +130,8 @@ namespace CapaPresentacion
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message + ex.StackTrace);
             }
-
             this.Mostrar();
             CenterToScreen();
             this.btnEliminar.Enabled = false;
@@ -161,13 +140,8 @@ namespace CapaPresentacion
             this.txtId.Visible = false;
             this.LimpiarEtiquetas();
             this.Botones();
-           
-
-
         }
-
         // insertar producto cuando se escanea el código de barras
-
         private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
@@ -199,16 +173,13 @@ namespace CapaPresentacion
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-
         // para eliminar productos seleccionados
-
         private void chkEliminar_CheckedChanged(object sender, EventArgs e)
         {
             if (chkEliminar.Checked)
             {
                 this.dataListado.Columns[0].Visible = true;
                 this.btnEliminar.Enabled = true;
-
             }
             else
             {
@@ -216,7 +187,6 @@ namespace CapaPresentacion
                 this.btnEliminar.Enabled = false;
             }
         }
-
         private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dataListado.Columns["Seleccionar"].Index)
@@ -225,7 +195,6 @@ namespace CapaPresentacion
                 ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
             }
         }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             try
@@ -267,9 +236,7 @@ namespace CapaPresentacion
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-
         //Procedimiento para editar las cantidades
-
         private void dataListado_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             this.txtId.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["id"].Value);
@@ -277,12 +244,10 @@ namespace CapaPresentacion
             this.txtCantidad.Text = "0";
             this.txtCantidad.Focus();
         }
-
         public void ActualizarData()
         {
             this.Mostrar();
         }
-
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
@@ -310,18 +275,15 @@ namespace CapaPresentacion
             }
             catch(Exception ex)
             {
-                this.MensajeError("Debe ingresar una cantidad válida");
+                this.MensajeError("Debe ingresar una cantidad válida" + ex.Message + ex.StackTrace);
             }
         }
-
         private void txtCantidad_Leave(object sender, EventArgs e)
         {
             this.txtId.Text = string.Empty;
             this.txtCantidad.Text = string.Empty;
             this.txtCantidad.Enabled = false;
-
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string rpta = "";
@@ -336,21 +298,16 @@ namespace CapaPresentacion
                 this.Mostrar();
                 this.txtCodigo.Focus();
                 this.LimpiarEtiquetas();
-
-
             }
             catch(Exception ex)
             {
-
+                MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-
         private void chkFactura_CheckedChanged(object sender, EventArgs e)
         {
             this.Botones();
         }
-
-
         private void btnNotas_Click(object sender, EventArgs e)
         {
             if (this.lblTotalBolivares.Text == "")
@@ -367,10 +324,8 @@ namespace CapaPresentacion
                 if (this.txtCedula.Text == "")
                 {
                     this.txtCedula.Text = "00000000-0";
-                }
-                
-                FrmPagar form = new FrmPagar();
-                    
+                }       
+                FrmPagar form = new FrmPagar();   
                 form.lblTotalBolivaresPagar.Text = this.lblTotalBolivares.Text;
                 form.lblTotalDolaresPagar.Text = this.lblTotalDolares.Text;
                 form.lblexento.Text = this.lblExentoBolivares.Text;
@@ -381,14 +336,9 @@ namespace CapaPresentacion
                 form.lblCedula.Text = this.txtCedula.Text;
                 form.lbltelefono.Text = this.txtTelefono.Text;
                 form.lblDirección.Text = this.txtDireccion.Text;
-
-
-                form.ShowDialog();
-
-                
+                form.ShowDialog();                
             }
         }
-
         private void btnFactura_Click(object sender, EventArgs e)
         {
             if (this.lblTotalBolivares.Text == "")
@@ -405,12 +355,17 @@ namespace CapaPresentacion
                 else
                 {
                     FrmPagar form = new FrmPagar();
-
                     form.lblTotalBolivaresPagar.Text = this.lblTotalBolivares.Text;
                     form.lblTotalDolaresPagar.Text = this.lblTotalDolares.Text;
-
+                    form.lblexento.Text = this.lblExentoBolivares.Text;
+                    form.lblIvaBolivares.Text = this.lblIvaBolivares.Text;
+                    form.lblSubtotalbolivares.Text = this.lblSubTotalBolivares.Text;
+                    form.lblNombre.Text = this.txtNombre.Text;
+                    form.lblTipo.Text = this.cbTipodePersona.Text;
+                    form.lblCedula.Text = this.txtCedula.Text;
+                    form.lbltelefono.Text = this.txtTelefono.Text;
+                    form.lblDirección.Text = this.txtDireccion.Text;
                     form.ShowDialog();
-
                 }
             }
         }

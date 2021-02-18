@@ -16,15 +16,12 @@ namespace CapaPresentacion
     {
         private bool IsNuevo = false;
         private bool IsEditar = false;
-
         public FrmArticulo()
         {
             InitializeComponent();
-
             this.LlenarComboCategoria();
             this.LlenarComboPresentacion();
         }
-
         private void MensajeOk(string mensaje)
         {
             MessageBox.Show(mensaje, "Productos", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -33,7 +30,6 @@ namespace CapaPresentacion
         {
             MessageBox.Show(mensaje, "Productos", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
         private void Limpiar()
         {
             this.txtIdarticulo.Text = string.Empty;
@@ -45,8 +41,7 @@ namespace CapaPresentacion
             this.pxImagen.Image = global::CapaPresentacion.Properties.Resources.file;
             this.txtInventario.Text = string.Empty;
             this.txtPcompra.Text = string.Empty;
-            this.txtPventa.Text = string.Empty;
-            
+            this.txtPventa.Text = string.Empty;            
         }
         private void Habilitar(bool valor)
         {
@@ -62,9 +57,7 @@ namespace CapaPresentacion
             this.txtPcompra.ReadOnly = !valor;
             this.txtPventa.ReadOnly = !valor;
             this.txtPVPbs.ReadOnly = !valor;
-
         }
-
         private void Botones()
         {
             if (this.IsNuevo || this.IsEditar)
@@ -86,7 +79,6 @@ namespace CapaPresentacion
                 this.chkExcento.Enabled = false;
             }
         }
-
         private void OcultarColumnas()
         {
             this.dataListado.Columns[0].Visible = false;
@@ -94,7 +86,6 @@ namespace CapaPresentacion
             this.dataListado.Columns[10].Visible = false;
             this.dataListado.Columns[12].Visible = false;
         }
-
         private void Mostrar()
         {
             this.dataListado.DataSource = NArticulo.Mostrar();
@@ -102,17 +93,14 @@ namespace CapaPresentacion
             this.dataListado.Columns[2].Width = 50;
             this.dataListado.Columns[3].Width = 200;
             this.dataListado.Columns[4].Width = 300;
-
             this.lblTotal.Text = "Productos registrados: " + Convert.ToString(dataListado.Rows.Count);
         }
-
         private void BuscarNombre()
         {
             this.dataListado.DataSource = NArticulo.BuscarNombre(this.txtBuscar.Text);
             this.OcultarColumnas();
             this.lblTotal.Text = "Productos registrados: " + Convert.ToString(dataListado.Rows.Count);
         }
-
         private void LlenarComboPresentacion()
         {
             cbIdpresentacion.DataSource = NPresentacion.Mostrar();
@@ -125,43 +113,31 @@ namespace CapaPresentacion
             cbIdcategoria.ValueMember = "idcategoria";
             cbIdcategoria.DisplayMember = "nombre";
         }
-
-
         private void FrmArticulo_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
-
             this.Mostrar();
             this.Habilitar(false);
             this.Botones();
         }
-
         private void btnCargar_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
-
             DialogResult result = dialog.ShowDialog();
-
             if (result == DialogResult.OK)
             {
                 this.pxImagen.SizeMode = PictureBoxSizeMode.StretchImage;
                 this.pxImagen.Image = Image.FromFile(dialog.FileName);
-
             }
-
-
         }
-
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             this.pxImagen.Image = global::CapaPresentacion.Properties.Resources.file;
         }
-
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             this.BuscarNombre();
         }
-
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             this.IsNuevo = true;
@@ -170,18 +146,15 @@ namespace CapaPresentacion
             this.Limpiar();
             this.Habilitar(true);
             this.txtCodigo.Focus();
-
             this.txtInventario.Text = "0";
             this.txtPcompra.Text = "0,00";
             this.txtPventa.Text = "0,00";
         }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
                 string rpta = "";
-
                 if (this.cbIdcategoria.Text == string.Empty || this.txtCodigo.Text == string.Empty ||
                     this.txtNombre.Text == string.Empty || this.cbIdpresentacion.Text == string.Empty
                     || this.txtPventa.Text == string.Empty)
@@ -192,14 +165,11 @@ namespace CapaPresentacion
                 {
                     System.IO.MemoryStream ms = new System.IO.MemoryStream();
                     this.pxImagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-
                     byte[] imagen = ms.GetBuffer();
-
 
                     if (this.IsNuevo)
                     {
                         string producto = "";
-
                         if (chkExcento.Checked)
                         {
                             producto = this.txtNombre.Text + " (E)";
@@ -217,7 +187,6 @@ namespace CapaPresentacion
                     else
                     {
                         string producto = "";
-
                         if (chkExcento.Checked)
                         {
                             producto = this.txtNombre.Text + " (E)";
@@ -226,7 +195,6 @@ namespace CapaPresentacion
                         {
                             producto = this.txtNombre.Text;
                         }
-
                         rpta = NArticulo.Editar(Convert.ToInt32(this.txtIdarticulo.Text),
                             this.txtCodigo.Text.Trim(), producto.ToUpper().Trim(),
                             this.txtDescripcion.Text, imagen, Convert.ToInt32(this.cbIdcategoria.SelectedValue),
@@ -244,7 +212,6 @@ namespace CapaPresentacion
                         {
                             this.MensajeOk("Se ha editado el producto");
                         }
-
                     }
                     else
                     {
@@ -263,7 +230,6 @@ namespace CapaPresentacion
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-
         private void btnEditar_Click(object sender, EventArgs e)
         {
             if (!this.txtIdarticulo.Text.Equals(""))
@@ -271,7 +237,6 @@ namespace CapaPresentacion
                 this.IsEditar = true;
                 this.Botones();
                 this.Habilitar(true);
-
                 if (this.txtPVPbs.Text.Equals(""))
                 {
                     this.txtPVPbs.Text = "0,00";
@@ -288,14 +253,12 @@ namespace CapaPresentacion
                 {
                     this.txtPventa.Text = "0,00";
                 }
-
             }
             else
             {
                 this.MensajeError("Debe seleccionar primero el producto a editar");
             }
         }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.IsEditar = false;
@@ -305,7 +268,6 @@ namespace CapaPresentacion
             this.Habilitar(false);
             this.chkExcento.Checked = false;
         }
-
         private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dataListado.Columns["Seleccionar"].Index)
@@ -314,7 +276,6 @@ namespace CapaPresentacion
                 ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
             }
         }
-
         private void dataListado_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             this.txtIdarticulo.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["idarticulo"].Value);
@@ -351,9 +312,7 @@ namespace CapaPresentacion
             {
                 this.txtPventa.Text = "0,00";
             }
-
         }
-
         private void chkEliminar_CheckedChanged(object sender, EventArgs e)
         {
             if (chkEliminar.Checked)
@@ -365,7 +324,6 @@ namespace CapaPresentacion
                 this.dataListado.Columns[0].Visible = false;
             }
         }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             try
@@ -403,11 +361,6 @@ namespace CapaPresentacion
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -23,14 +23,12 @@ namespace CapaDatos
         {
 
         }
-
         public DMermatipo(int id, string nombre, string descripcion)
         {
             this.Id = id;
             this.Nombre = nombre;
             this.Descripcion = descripcion;
         }
-
         public string Insertar(DMermatipo Mermatipo)
         {
             string rpta = "";
@@ -177,7 +175,7 @@ namespace CapaDatos
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);
             }
-            catch (Exception ex)
+            catch 
             {
                 DtResultado = null;
             }

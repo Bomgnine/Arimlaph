@@ -16,7 +16,6 @@ namespace CapaPresentacion
     {
         private bool IsNuevo = false;
         private bool IsEditar = false;
-
         private void MensajeOk(string mensaje)
         {
             MessageBox.Show(mensaje, "Compras", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -25,7 +24,6 @@ namespace CapaPresentacion
         {
             MessageBox.Show(mensaje, "Compras", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
         private void Limpiar()
         {
             this.txtOperacion.Text = string.Empty;
@@ -39,9 +37,7 @@ namespace CapaPresentacion
             this.txtImpuesto.Text = string.Empty;
             this.txtTotal.Text = string.Empty;
             this.txtBuscar.Text = string.Empty;
-
         }
-
         private void Habilitar(bool valor)
         {
             this.txtFecha.ReadOnly = !valor;
@@ -53,8 +49,6 @@ namespace CapaPresentacion
             this.txtBase.ReadOnly = !valor;
             this.txtImpuesto.ReadOnly = !valor;
             this.txtTotal.ReadOnly = !valor;
-          
-
         }
         private void Botones()
         {
@@ -79,42 +73,30 @@ namespace CapaPresentacion
         {
             this.dataListado.Columns[0].Visible = false;
         }
-
-
         private void Mostrar()
         {
-            this.dataListado.DataSource = NCompras.Mostrar();
-            
+            this.dataListado.DataSource = NCompras.Mostrar();            
         }
         private void BuscarNombre()
         {
-            this.dataListado.DataSource = NCompras.Buscar(this.txtBuscar.Text);
-      
+            this.dataListado.DataSource = NCompras.Buscar(this.txtBuscar.Text);      
         }
-
-
         public FrmCompras()
         {
-            InitializeComponent();
-            
-           
+            InitializeComponent();           
         }
-
         private void FrmCompras_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
             this.Mostrar();
             this.Habilitar(false);
             this.Botones();
-
             this.OcultarColumna();
         }
-
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             this.BuscarNombre();
         }
-
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             this.IsNuevo = true;
@@ -123,7 +105,6 @@ namespace CapaPresentacion
             this.Limpiar();
             this.Habilitar(true);
         }
-
         private void btnEditar_Click(object sender, EventArgs e)
         {
             if (!this.txtOperacion.Text.Equals(""))
@@ -132,14 +113,12 @@ namespace CapaPresentacion
                 this.IsNuevo = false;
                 this.Botones();
                 this.Habilitar(true);
-
             }
             else
             {
                 this.MensajeError("Debe seleccionar primero la factura a editar");
             }
         }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.IsEditar = false;
@@ -149,7 +128,6 @@ namespace CapaPresentacion
             this.Habilitar(false);
             this.OcultarColumna();
         }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
@@ -195,23 +173,17 @@ namespace CapaPresentacion
                         total = 0;
                     }
 
-
-
                     if (this.IsNuevo)
                     {
-                        MessageBox.Show("nuevo");
-                        
+                        MessageBox.Show("nuevo");                  
                         rpta = NCompras.Insertar(fecha, this.txtNombre.Text, this.txtRif.Text, this.txtFactura.Text,
                             this.txtControl.Text, this.txtMaquina.Text, baseI, impuesto, total);
-
                     }
                     else
                     {
                         MessageBox.Show("Editar");
-
                         rpta = NCompras.Editar(Convert.ToInt32(this.txtOperacion.Text), fecha, this.txtNombre.Text, this.txtRif.Text, this.txtFactura.Text,
-                             this.txtControl.Text, this.txtMaquina.Text, baseI, impuesto, total);
-                        
+                             this.txtControl.Text, this.txtMaquina.Text, baseI, impuesto, total);                        
                     }
                     if (rpta.Equals("OK"))
                     {
@@ -223,7 +195,6 @@ namespace CapaPresentacion
                         {
                             this.MensajeOk("Se ha editado la factura");
                         }
-
                     }
                     else
                     {
@@ -240,9 +211,7 @@ namespace CapaPresentacion
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
-
         }
-
         private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dataListado.Columns["Seleccionar"].Index)
@@ -251,7 +220,6 @@ namespace CapaPresentacion
                 ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
             }
         }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             try
@@ -291,7 +259,6 @@ namespace CapaPresentacion
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-
         private void chkEliminar_CheckedChanged(object sender, EventArgs e)
         {
             if (chkEliminar.Checked)
@@ -303,7 +270,6 @@ namespace CapaPresentacion
                 this.dataListado.Columns[0].Visible = false;
             }
         }
-
         private void dataListado_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             this.txtOperacion.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["nOperacion"].Value);

@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dsNotasDeEntrega = new CapaPresentacion.dsNotasDeEntrega();
             this.spNotas_entregaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsNotasDeEntrega = new CapaPresentacion.dsNotasDeEntrega();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.spNotas_entregaTableAdapter = new CapaPresentacion.dsNotasDeEntregaTableAdapters.spNotas_entregaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dsNotasDeEntrega)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spNotas_entregaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsNotasDeEntrega)).BeginInit();
             this.SuspendLayout();
+            // 
+            // spNotas_entregaBindingSource
+            // 
+            this.spNotas_entregaBindingSource.DataMember = "spNotas_entrega";
+            this.spNotas_entregaBindingSource.DataSource = this.dsNotasDeEntrega;
+            // 
+            // dsNotasDeEntrega
+            // 
+            this.dsNotasDeEntrega.DataSetName = "dsNotasDeEntrega";
+            this.dsNotasDeEntrega.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -48,18 +58,8 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(552, 361);
+            this.reportViewer1.Size = new System.Drawing.Size(837, 741);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // dsNotasDeEntrega
-            // 
-            this.dsNotasDeEntrega.DataSetName = "dsNotasDeEntrega";
-            this.dsNotasDeEntrega.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // spNotas_entregaBindingSource
-            // 
-            this.spNotas_entregaBindingSource.DataMember = "spNotas_entrega";
-            this.spNotas_entregaBindingSource.DataSource = this.dsNotasDeEntrega;
             // 
             // spNotas_entregaTableAdapter
             // 
@@ -69,15 +69,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 361);
+            this.ClientSize = new System.Drawing.Size(837, 741);
             this.Controls.Add(this.reportViewer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmNotaDeEntrega";
             this.Text = "Nota de Entrega";
             this.Load += new System.EventHandler(this.frmNotaDeEntrega_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dsNotasDeEntrega)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spNotas_entregaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsNotasDeEntrega)).EndInit();
             this.ResumeLayout(false);
 
         }

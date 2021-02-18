@@ -51,14 +51,6 @@ namespace CapaPresentacion
             cbMermatipo.ValueMember = "id";
             cbMermatipo.DisplayMember = "tipo";
         }
-
-
-
-
-
-
-
-
         private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
             try
@@ -83,7 +75,6 @@ namespace CapaPresentacion
                     this.Mostrar();
                     this.txtCodigo.Text = string.Empty;
                     this.txtCodigo.Focus();
-
                     this.LlenarComboMermatipo();
                 }
             }
@@ -91,9 +82,7 @@ namespace CapaPresentacion
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
-
         }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             string rpta = "";
@@ -106,17 +95,13 @@ namespace CapaPresentacion
                     MensajeOk("Se han eliminado los productos");
                 }
                 this.Mostrar();
-                this.txtCodigo.Focus();
-                
-
-
+                this.txtCodigo.Focus();              
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-
         private void FrmMerma_Load(object sender, EventArgs e)
         {
             string rpta = "";
@@ -129,17 +114,16 @@ namespace CapaPresentacion
                     MensajeOk("Se han eliminado los productos");
                 }
                 this.Mostrar();
-                this.txtCodigo.Focus();
-                
+                this.txtCodigo.Focus();                
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message + ex.StackTrace);
             }
             this.txtCodigo.Focus();
             this.Mostrar();
             CenterToScreen();
         }
-
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             string rpta = "";
@@ -152,24 +136,19 @@ namespace CapaPresentacion
                     MensajeOk("Se han eliminado los productos");
                 }
                 this.Mostrar();
-                this.txtCodigo.Focus();
-                
-
-
+                this.txtCodigo.Focus();              
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-
         private void chkEliminar_CheckedChanged(object sender, EventArgs e)
         {
             if (chkEliminar.Checked)
             {
                 this.dataListado.Columns[0].Visible = true;
                 this.btnEliminar.Enabled = true;
-
             }
             else
             {
@@ -177,7 +156,6 @@ namespace CapaPresentacion
                 this.btnEliminar.Enabled = false;
             }
         }
-
         private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dataListado.Columns["Seleccionar"].Index)
@@ -186,7 +164,6 @@ namespace CapaPresentacion
                 ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
             }
         }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             try
@@ -218,8 +195,7 @@ namespace CapaPresentacion
                     }
                     this.Mostrar();
                     this.chkEliminar.Checked = false;
-                    this.txtCodigo.Focus();
-                    
+                    this.txtCodigo.Focus();                    
                 }
             }
             catch (Exception ex)
@@ -227,7 +203,6 @@ namespace CapaPresentacion
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             try
@@ -243,27 +218,19 @@ namespace CapaPresentacion
                 {
                     DateTime hoy = DateTime.Now;
                     string fecha = hoy.ToString("d");
-
                     string tipomerma = this.cbMermatipo.Text;
-
                     rpta = NMerma.Insertar(fecha, tipomerma);
-
                     rpta2 = NAuxventas.ActualizarInventario();
-
                     NAuxventas.Borrar();
 
-
                     if (rpta.Equals("OK"))
-                    {
-                        
-                            this.MensajeOk("Se ha registrado la merma");
-                 
+                    {                        
+                            this.MensajeOk("Se ha registrado la merma");                 
                     }
                     else
                     {
                         this.MensajeError(rpta);
-                    }
-                    
+                    }                    
                     this.Mostrar();
                 }
             }

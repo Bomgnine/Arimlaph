@@ -26,12 +26,10 @@ namespace CapaPresentacion
         {
             MessageBox.Show(mensaje, "Facturas", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
         private void Buscar()
         {
             this.dataListado.DataSource = NFacturas.Buscar(Convert.ToInt32(this.txtIdv.Text));
         }
-
         public void Mostrar()
         {
             this.dataListado.DataSource = NFacturas.Mostrar();
@@ -39,22 +37,18 @@ namespace CapaPresentacion
             this.dataListado.Columns[1].Width = 50;
             this.dataListado.Columns[2].Width = 75;
             this.dataListado.Columns[4].Width = 200;
-
         }
-
         private void FrmFacturas_Load(object sender, EventArgs e)
         {
             this.Mostrar();
             this.btnEliminar.Enabled=false;
         }
-
         private void chkEliminar_CheckedChanged(object sender, EventArgs e)
         {
             if (chkEliminar.Checked)
             {
                 this.dataListado.Columns[0].Visible = true;
                 this.btnEliminar.Enabled = true;
-
             }
             else
             {
@@ -62,7 +56,6 @@ namespace CapaPresentacion
                 this.btnEliminar.Enabled = false;
             }
         }
-
         private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dataListado.Columns["Seleccionar"].Index)
@@ -71,7 +64,6 @@ namespace CapaPresentacion
                 ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
             }
         }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             try
@@ -104,7 +96,6 @@ namespace CapaPresentacion
                     this.Mostrar();
                     this.chkEliminar.Checked = false;
                     this.txtIdv.Focus();
-
                 }
             }
             catch (Exception ex)
@@ -112,10 +103,8 @@ namespace CapaPresentacion
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-
         private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            
+        {            
             try
             {
                 if (this.txtIdv.Text == "")
@@ -127,11 +116,10 @@ namespace CapaPresentacion
                    this.Buscar();
                 }
             }
-            catch 
+            catch (Exception ex)
             {
-
-            }
-            
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }   
         }
     }
 }

@@ -16,7 +16,6 @@ namespace CapaPresentacion
     {
         private bool IsNuevo = false;
         private bool IsEditar = false;
-
         public FrmMermatipo()
         {
             InitializeComponent();
@@ -29,7 +28,6 @@ namespace CapaPresentacion
         {
             MessageBox.Show(mensaje, "Tipo de Merma", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
         private void Limpiar()
         {
             this.txtNombre.Text = string.Empty;
@@ -42,7 +40,6 @@ namespace CapaPresentacion
             this.txtNombre.ReadOnly = !valor;
             this.txtDescripcion.ReadOnly = !valor;
         }
-
         private void Botones()
         {
             if (this.IsNuevo || this.IsEditar)
@@ -62,32 +59,25 @@ namespace CapaPresentacion
                 this.btnCancelar.Enabled = false;
             }
         }
-
         private void OcultarColumnas()
         {
             this.dataListado.Columns[0].Visible = false;
         }
-
         private void Mostrar()
         {
             this.dataListado.DataSource = NMermatipo.Mostrar();
             this.OcultarColumnas();
             this.dataListado.Columns[1].Width = 40;
             this.dataListado.Columns[2].Width = 200;
-            this.dataListado.Columns[3].Width = 400;
-            
+            this.dataListado.Columns[3].Width = 400;            
         }
-
         private void FrmMermatipo_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
-
             this.Mostrar();
             this.Habilitar(false);
             this.Botones();
-
         }
-
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             this.IsNuevo = true;
@@ -97,7 +87,6 @@ namespace CapaPresentacion
             this.Habilitar(true);
             this.txtNombre.Focus();
         }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
@@ -128,7 +117,6 @@ namespace CapaPresentacion
                         {
                             this.MensajeOk("Se ha editado el Tipo de Merma");
                         }
-
                     }
                     else
                     {
@@ -146,14 +134,12 @@ namespace CapaPresentacion
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-
         private void dataListado_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             this.txtCodigo.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["id"].Value);
             this.txtNombre.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["tipo"].Value);
             this.txtDescripcion.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["descripcion"].Value);
         }
-
         private void btnEditar_Click(object sender, EventArgs e)
         {
             if (!this.txtCodigo.Text.Equals(""))
@@ -167,7 +153,6 @@ namespace CapaPresentacion
                 this.MensajeError("Debe seleccionar primero el Tipo de Merma a editar");
             }
         }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.IsEditar = false;
@@ -176,7 +161,6 @@ namespace CapaPresentacion
             this.Limpiar();
             this.Habilitar(false);
         }
-
         private void chkEliminar_CheckedChanged(object sender, EventArgs e)
         {
             if (chkEliminar.Checked)
@@ -188,7 +172,6 @@ namespace CapaPresentacion
                 this.dataListado.Columns[0].Visible = false;
             }
         }
-
         private void dataListado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dataListado.Columns["Seleccionar"].Index)
@@ -197,7 +180,6 @@ namespace CapaPresentacion
                 ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
             }
         }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             try

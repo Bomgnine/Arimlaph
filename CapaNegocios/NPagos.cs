@@ -28,7 +28,6 @@ namespace CapaNegocio
 
             return obj.Insertar(obj);
         }
-
         public static string InsertarVenta(int idv, string fecha)
         {
             DPagos obj = new DPagos();

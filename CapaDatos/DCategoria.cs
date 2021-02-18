@@ -81,7 +81,6 @@ namespace CapaDatos
             }
             return rpta;
         }
-
         public string Editar (DCategoria Categoria)
         {
             string rpta = "";
@@ -130,7 +129,6 @@ namespace CapaDatos
             }
             return rpta;
         }
-
         public string Eliminar (DCategoria Categoria)
         {
             string rpta = "";
@@ -165,7 +163,6 @@ namespace CapaDatos
             }
             return rpta;
         }
-
         public DataTable Mostrar ()
         {
             DataTable DtResultado = new DataTable("categoria");
@@ -188,7 +185,6 @@ namespace CapaDatos
             }
             return DtResultado;
         }
-
         public DataTable BuscarNombre (DCategoria Categoria)
         {
             DataTable DtResultado = new DataTable("categoria");
@@ -218,13 +214,5 @@ namespace CapaDatos
             }
             return DtResultado;
         }
-
-
-
-
-
-
-
-
     }
 }

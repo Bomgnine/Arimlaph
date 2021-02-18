@@ -80,7 +80,6 @@ namespace CapaDatos
             }
             return rpta;
         }
-
         public string Editar(DPresentacion Presentacion)
         {
             string rpta = "";
@@ -129,7 +128,6 @@ namespace CapaDatos
             }
             return rpta;
         }
-
         public string Eliminar(DPresentacion Presentacion)
         {
             string rpta = "";
@@ -164,7 +162,6 @@ namespace CapaDatos
             }
             return rpta;
         }
-
         public DataTable Mostrar()
         {
             DataTable DtResultado = new DataTable("presentacion");
@@ -187,7 +184,6 @@ namespace CapaDatos
             }
             return DtResultado;
         }
-
         public DataTable BuscarNombre(DPresentacion Presentacion)
         {
             DataTable DtResultado = new DataTable("presentacion");
