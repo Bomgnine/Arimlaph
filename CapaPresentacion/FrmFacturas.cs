@@ -40,6 +40,7 @@ namespace CapaPresentacion
         }
         private void FrmFacturas_Load(object sender, EventArgs e)
         {
+            this.CenterToScreen();
             this.Mostrar();
             this.btnEliminar.Enabled=false;
         }

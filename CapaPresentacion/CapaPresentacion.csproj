@@ -60,10 +60,91 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dsCompras.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCompras.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsCuadreCaja.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCuadreCaja.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsFacturas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFacturas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsGanancias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsGanancias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsInventario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsInventario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsListaPrecios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsListaPrecios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsMerma.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMerma.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsNotasDeEntrega.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsNotasDeEntrega.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsVentas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsVentas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsVentasPorProducto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsVentasPorProducto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FechasFacturasEmitidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FechasFacturasEmitidas.Designer.cs">
+      <DependentUpon>FechasFacturasEmitidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FechasGanancias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FechasGanancias.Designer.cs">
+      <DependentUpon>FechasGanancias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FechasLibroCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FechasLibroCompras.Designer.cs">
+      <DependentUpon>FechasLibroCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FechasMerma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FechasMerma.Designer.cs">
+      <DependentUpon>FechasMerma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FechasVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FechasVentas.Designer.cs">
+      <DependentUpon>FechasVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FechasVentasPorProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FechasVentasPorProducto.Designer.cs">
+      <DependentUpon>FechasVentasPorProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmActualizarPrecios.cs">
       <SubType>Form</SubType>
@@ -101,6 +182,12 @@
     <Compile Include="FrmInventario.Designer.cs">
       <DependentUpon>FrmInventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMerma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,11 +218,65 @@
     <Compile Include="FrmVentas.Designer.cs">
       <DependentUpon>FrmVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Informes\FrmCuadreCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\FrmCuadreCaja.Designer.cs">
+      <DependentUpon>FrmCuadreCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\FrmFacturasEmitidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\FrmFacturasEmitidas.Designer.cs">
+      <DependentUpon>FrmFacturasEmitidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\frmGanancias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\frmGanancias.Designer.cs">
+      <DependentUpon>frmGanancias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\FrmInventarioReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\FrmInventarioReport.Designer.cs">
+      <DependentUpon>FrmInventarioReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\FrmLibroCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\FrmLibroCompras.Designer.cs">
+      <DependentUpon>FrmLibroCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\FrmListaPrecios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\FrmListaPrecios.Designer.cs">
+      <DependentUpon>FrmListaPrecios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\frmMermaReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\frmMermaReport.Designer.cs">
+      <DependentUpon>frmMermaReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Informes\frmNotaDeEntrega.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Informes\frmNotaDeEntrega.Designer.cs">
       <DependentUpon>frmNotaDeEntrega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\FrmVentaPorProductoReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\FrmVentaPorProductoReport.Designer.cs">
+      <DependentUpon>FrmVentaPorProductoReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\FrmVentasReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\FrmVentasReport.Designer.cs">
+      <DependentUpon>FrmVentasReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -158,6 +299,24 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FechasFacturasEmitidas.resx">
+      <DependentUpon>FechasFacturasEmitidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FechasGanancias.resx">
+      <DependentUpon>FechasGanancias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FechasLibroCompras.resx">
+      <DependentUpon>FechasLibroCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FechasMerma.resx">
+      <DependentUpon>FechasMerma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FechasVentas.resx">
+      <DependentUpon>FechasVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FechasVentasPorProducto.resx">
+      <DependentUpon>FechasVentasPorProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmActualizarPrecios.resx">
       <DependentUpon>FrmActualizarPrecios.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +335,9 @@
     <EmbeddedResource Include="FrmInventario.resx">
       <DependentUpon>FrmInventario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMerma.resx">
       <DependentUpon>FrmMerma.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,10 +353,46 @@
     <EmbeddedResource Include="FrmVentas.resx">
       <DependentUpon>FrmVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Informes\FrmCuadreCaja.resx">
+      <DependentUpon>FrmCuadreCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\FrmFacturasEmitidas.resx">
+      <DependentUpon>FrmFacturasEmitidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\frmGanancias.resx">
+      <DependentUpon>frmGanancias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\FrmInventarioReport.resx">
+      <DependentUpon>FrmInventarioReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\FrmLibroCompras.resx">
+      <DependentUpon>FrmLibroCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\FrmListaPrecios.resx">
+      <DependentUpon>FrmListaPrecios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\frmMermaReport.resx">
+      <DependentUpon>frmMermaReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Informes\frmNotaDeEntrega.resx">
       <DependentUpon>frmNotaDeEntrega.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Informes\FrmVentaPorProductoReport.resx">
+      <DependentUpon>FrmVentaPorProductoReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\FrmVentasReport.resx">
+      <DependentUpon>FrmVentasReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\rptCuadreCaja.rdlc" />
+    <EmbeddedResource Include="Informes\rptFacturasEmitidas.rdlc" />
+    <EmbeddedResource Include="Informes\rptGanancias.rdlc" />
+    <EmbeddedResource Include="Informes\rptInventario.rdlc" />
+    <EmbeddedResource Include="Informes\rptLibroCompras.rdlc" />
+    <EmbeddedResource Include="Informes\rptListaPrecios.rdlc" />
+    <EmbeddedResource Include="Informes\rptMerma.rdlc" />
     <EmbeddedResource Include="Informes\rptNotaDeEntrega.rdlc" />
+    <EmbeddedResource Include="Informes\rptVentas.rdlc" />
+    <EmbeddedResource Include="Informes\rptVentasPorProducto.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -202,6 +400,83 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="dsCompras.xsc">
+      <DependentUpon>dsCompras.xsd</DependentUpon>
+    </None>
+    <None Include="dsCompras.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCompras.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsCompras.xss">
+      <DependentUpon>dsCompras.xsd</DependentUpon>
+    </None>
+    <None Include="dsCuadreCaja.xsc">
+      <DependentUpon>dsCuadreCaja.xsd</DependentUpon>
+    </None>
+    <None Include="dsCuadreCaja.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCuadreCaja.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsCuadreCaja.xss">
+      <DependentUpon>dsCuadreCaja.xsd</DependentUpon>
+    </None>
+    <None Include="dsFacturas.xsc">
+      <DependentUpon>dsFacturas.xsd</DependentUpon>
+    </None>
+    <None Include="dsFacturas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFacturas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsFacturas.xss">
+      <DependentUpon>dsFacturas.xsd</DependentUpon>
+    </None>
+    <None Include="dsGanancias.xsc">
+      <DependentUpon>dsGanancias.xsd</DependentUpon>
+    </None>
+    <None Include="dsGanancias.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsGanancias.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsGanancias.xss">
+      <DependentUpon>dsGanancias.xsd</DependentUpon>
+    </None>
+    <None Include="dsInventario.xsc">
+      <DependentUpon>dsInventario.xsd</DependentUpon>
+    </None>
+    <None Include="dsInventario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsInventario.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsInventario.xss">
+      <DependentUpon>dsInventario.xsd</DependentUpon>
+    </None>
+    <None Include="dsListaPrecios.xsc">
+      <DependentUpon>dsListaPrecios.xsd</DependentUpon>
+    </None>
+    <None Include="dsListaPrecios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsListaPrecios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsListaPrecios.xss">
+      <DependentUpon>dsListaPrecios.xsd</DependentUpon>
+    </None>
+    <None Include="dsMerma.xsc">
+      <DependentUpon>dsMerma.xsd</DependentUpon>
+    </None>
+    <None Include="dsMerma.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMerma.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsMerma.xss">
+      <DependentUpon>dsMerma.xsd</DependentUpon>
+    </None>
     <None Include="dsNotasDeEntrega.xsc">
       <DependentUpon>dsNotasDeEntrega.xsd</DependentUpon>
     </None>
@@ -212,6 +487,28 @@
     </None>
     <None Include="dsNotasDeEntrega.xss">
       <DependentUpon>dsNotasDeEntrega.xsd</DependentUpon>
+    </None>
+    <None Include="dsVentas.xsc">
+      <DependentUpon>dsVentas.xsd</DependentUpon>
+    </None>
+    <None Include="dsVentas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsVentas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsVentas.xss">
+      <DependentUpon>dsVentas.xsd</DependentUpon>
+    </None>
+    <None Include="dsVentasPorProducto.xsc">
+      <DependentUpon>dsVentasPorProducto.xsd</DependentUpon>
+    </None>
+    <None Include="dsVentasPorProducto.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsVentasPorProducto.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsVentasPorProducto.xss">
+      <DependentUpon>dsVentasPorProducto.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -21,6 +21,7 @@ namespace CapaPresentacion
 
         private void frmNotaDeEntrega_Load(object sender, EventArgs e)
         {
+            this.CenterToScreen();
             try
             {
                 int idv = IDV;
