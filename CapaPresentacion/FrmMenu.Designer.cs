@@ -51,6 +51,7 @@
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -63,7 +64,7 @@
             this.btnActualizarDolar.FlatAppearance.BorderSize = 0;
             this.btnActualizarDolar.Location = new System.Drawing.Point(0, 0);
             this.btnActualizarDolar.Name = "btnActualizarDolar";
-            this.btnActualizarDolar.Size = new System.Drawing.Size(150, 609);
+            this.btnActualizarDolar.Size = new System.Drawing.Size(150, 588);
             this.btnActualizarDolar.TabIndex = 100;
             this.btnActualizarDolar.Text = "Actualizar Dólar";
             this.btnActualizarDolar.UseVisualStyleBackColor = false;
@@ -72,7 +73,7 @@
             // btnCuadre
             // 
             this.btnCuadre.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnCuadre.Location = new System.Drawing.Point(6, 25);
+            this.btnCuadre.Location = new System.Drawing.Point(23, 25);
             this.btnCuadre.Name = "btnCuadre";
             this.btnCuadre.Size = new System.Drawing.Size(164, 70);
             this.btnCuadre.TabIndex = 1;
@@ -83,7 +84,7 @@
             // btnInformeMerma
             // 
             this.btnInformeMerma.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnInformeMerma.Location = new System.Drawing.Point(176, 25);
+            this.btnInformeMerma.Location = new System.Drawing.Point(207, 25);
             this.btnInformeMerma.Name = "btnInformeMerma";
             this.btnInformeMerma.Size = new System.Drawing.Size(164, 70);
             this.btnInformeMerma.TabIndex = 2;
@@ -94,7 +95,7 @@
             // btnInventarioInforme
             // 
             this.btnInventarioInforme.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnInventarioInforme.Location = new System.Drawing.Point(6, 101);
+            this.btnInventarioInforme.Location = new System.Drawing.Point(23, 111);
             this.btnInventarioInforme.Name = "btnInventarioInforme";
             this.btnInventarioInforme.Size = new System.Drawing.Size(164, 70);
             this.btnInventarioInforme.TabIndex = 3;
@@ -105,7 +106,7 @@
             // button1
             // 
             this.button1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button1.Location = new System.Drawing.Point(176, 101);
+            this.button1.Location = new System.Drawing.Point(207, 111);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(164, 70);
             this.button1.TabIndex = 4;
@@ -127,7 +128,7 @@
             // button3
             // 
             this.button3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button3.Location = new System.Drawing.Point(19, 101);
+            this.button3.Location = new System.Drawing.Point(19, 111);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(164, 70);
             this.button3.TabIndex = 6;
@@ -137,7 +138,8 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(379, 300);
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button4.Location = new System.Drawing.Point(384, 396);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(164, 70);
             this.button4.TabIndex = 7;
@@ -147,7 +149,8 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(379, 378);
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button5.Location = new System.Drawing.Point(384, 310);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(164, 70);
             this.button5.TabIndex = 8;
@@ -158,7 +161,7 @@
             // button6
             // 
             this.button6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button6.Location = new System.Drawing.Point(6, 25);
+            this.button6.Location = new System.Drawing.Point(19, 25);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(164, 70);
             this.button6.TabIndex = 9;
@@ -169,7 +172,7 @@
             // button7
             // 
             this.button7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button7.Location = new System.Drawing.Point(6, 101);
+            this.button7.Location = new System.Drawing.Point(19, 111);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(164, 70);
             this.button7.TabIndex = 10;
@@ -180,7 +183,7 @@
             // button8
             // 
             this.button8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button8.Location = new System.Drawing.Point(19, 177);
+            this.button8.Location = new System.Drawing.Point(19, 197);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(164, 70);
             this.button8.TabIndex = 11;
@@ -195,7 +198,7 @@
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.Location = new System.Drawing.Point(150, 0);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(876, 107);
+            this.button9.Size = new System.Drawing.Size(840, 107);
             this.button9.TabIndex = 0;
             this.button9.Text = "Facturación";
             this.button9.UseVisualStyleBackColor = false;
@@ -207,10 +210,10 @@
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button8);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.groupBox1.Location = new System.Drawing.Point(156, 113);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(203, 335);
+            this.groupBox1.Size = new System.Drawing.Size(203, 359);
             this.groupBox1.TabIndex = 101;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Productos";
@@ -218,7 +221,7 @@
             // button10
             // 
             this.button10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button10.Location = new System.Drawing.Point(19, 252);
+            this.button10.Location = new System.Drawing.Point(19, 283);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(164, 70);
             this.button10.TabIndex = 12;
@@ -228,14 +231,19 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.button16);
+            this.groupBox2.Controls.Add(this.button14);
             this.groupBox2.Controls.Add(this.btnInventarioInforme);
             this.groupBox2.Controls.Add(this.btnInformeMerma);
             this.groupBox2.Controls.Add(this.btnCuadre);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.groupBox2.Location = new System.Drawing.Point(555, 113);
+            this.groupBox2.Controls.Add(this.button13);
+            this.groupBox2.Controls.Add(this.button12);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.groupBox2.Location = new System.Drawing.Point(575, 113);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(348, 181);
+            this.groupBox2.Size = new System.Drawing.Size(390, 359);
             this.groupBox2.TabIndex = 102;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informes";
@@ -244,17 +252,17 @@
             // 
             this.groupBox3.Controls.Add(this.button6);
             this.groupBox3.Controls.Add(this.button7);
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.groupBox3.Location = new System.Drawing.Point(368, 113);
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.groupBox3.Location = new System.Drawing.Point(365, 113);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(175, 181);
+            this.groupBox3.Size = new System.Drawing.Size(203, 191);
             this.groupBox3.TabIndex = 103;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Mermas";
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(731, 448);
+            this.button11.Location = new System.Drawing.Point(782, 488);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(164, 70);
             this.button11.TabIndex = 104;
@@ -264,17 +272,17 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(561, 300);
+            this.button12.Location = new System.Drawing.Point(23, 197);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(164, 70);
             this.button12.TabIndex = 105;
-            this.button12.Text = "Informe de Facturación";
+            this.button12.Text = "Informe de Facturas Emitidas";
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(731, 300);
+            this.button13.Location = new System.Drawing.Point(207, 197);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(164, 70);
             this.button13.TabIndex = 106;
@@ -284,7 +292,7 @@
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(561, 378);
+            this.button14.Location = new System.Drawing.Point(207, 283);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(164, 70);
             this.button14.TabIndex = 107;
@@ -295,7 +303,7 @@
             // button15
             // 
             this.button15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button15.Location = new System.Drawing.Point(244, 499);
+            this.button15.Location = new System.Drawing.Point(384, 488);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(164, 70);
             this.button15.TabIndex = 108;
@@ -306,7 +314,7 @@
             // button16
             // 
             this.button16.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button16.Location = new System.Drawing.Point(450, 499);
+            this.button16.Location = new System.Drawing.Point(23, 283);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(164, 70);
             this.button16.TabIndex = 109;
@@ -314,17 +322,25 @@
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
+            // button17
+            // 
+            this.button17.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button17.Location = new System.Drawing.Point(175, 488);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(164, 70);
+            this.button17.TabIndex = 110;
+            this.button17.Text = "Usuarios";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1026, 609);
-            this.Controls.Add(this.button16);
+            this.ClientSize = new System.Drawing.Size(990, 588);
+            this.Controls.Add(this.button17);
             this.Controls.Add(this.button15);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -370,5 +386,6 @@
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button17;
     }
 }

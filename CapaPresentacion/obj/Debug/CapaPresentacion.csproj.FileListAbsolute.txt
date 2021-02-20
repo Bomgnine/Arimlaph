@@ -100,3 +100,5 @@ C:\Users\PC\source\repos\Arimlaph\CapaPresentacion\obj\Debug\CapaPresentacion.Fe
 C:\Users\PC\source\repos\Arimlaph\CapaPresentacion\obj\Debug\CapaPresentacion.FrmFacturasEmitidas.resources
 C:\Users\PC\source\repos\Arimlaph\CapaPresentacion\obj\Debug\CapaPresentacion.FechasLibroCompras.resources
 C:\Users\PC\source\repos\Arimlaph\CapaPresentacion\obj\Debug\CapaPresentacion.FrmLibroCompras.resources
+C:\Users\PC\source\repos\Arimlaph\CapaPresentacion\obj\Debug\CapaPresentacion.FrmUsuarios.resources
+C:\Users\PC\source\repos\Arimlaph\CapaPresentacion\obj\Debug\CapaPresentacion.FrmLogin.resources

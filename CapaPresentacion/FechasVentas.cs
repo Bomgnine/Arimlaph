@@ -29,6 +29,8 @@ namespace CapaPresentacion
         private void FechasVentas_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+            this.dtpDesde.Value = Convert.ToDateTime(DateTime.Now.ToString("d"));
+            this.dtpHasta.Value = Convert.ToDateTime(DateTime.Now.ToString("d"));
         }
     }
 }

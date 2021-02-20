@@ -20,6 +20,8 @@ namespace CapaPresentacion
         private void FechasLibroCompras_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+            this.dtpDesde.Value = Convert.ToDateTime(DateTime.Now.ToString("d"));
+            this.dtpHasta.Value = Convert.ToDateTime(DateTime.Now.ToString("d"));
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)

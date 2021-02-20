@@ -151,5 +151,11 @@ namespace CapaPresentacion
             FechasLibroCompras frm = new FechasLibroCompras();
             frm.ShowDialog();
         }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            FrmUsuarios frm = new FrmUsuarios();
+            frm.ShowDialog();
+        }
     }
 }

@@ -47,7 +47,6 @@ namespace CapaDatos
                 SqlCmd.CommandText = "spinsertar_categoria";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
-
                 SqlParameter ParIdcategoria = new SqlParameter();
                 ParIdcategoria.ParameterName = "@idcategoria";
                 ParIdcategoria.SqlDbType = SqlDbType.Int;

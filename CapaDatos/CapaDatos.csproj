@@ -54,6 +54,7 @@
     <Compile Include="DMermatipo.cs" />
     <Compile Include="DPagos.cs" />
     <Compile Include="DPresentacion.cs" />
+    <Compile Include="DUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
